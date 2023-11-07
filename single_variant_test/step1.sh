@@ -21,6 +21,6 @@ do
         --invNormalize=TRUE \
         --nThreads=20    \
         --isCateVarianceRatio=TRUE \
-        --outputPrefix=/home/dnanexus/result/${pheno}/step1/${pheno}_3th_10PC_chr${i} \
+        --outputPrefix=/home/dnanexus/result/${pheno}/step1/${pheno}_3rd_10PC_chr${i} \
         --IsOverwriteVarianceRatioFile=TRUE
 done
