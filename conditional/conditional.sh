@@ -34,4 +34,20 @@ plink2 \
      --out ./res/${gene}_${trait}_gwas_result
 
 #---------3.clump.sh----------------------------------------------
+#!/bin/bash
 
+trait=$1
+chr=$2
+gene=$3
+
+plink \
+     --bfile /home1/UKB_gene_v3_imp_qc/UKB_gene_v3_imp_qc_chr${chr} \
+     --clump ./${gene}_${trait}_gwas_result.${trait}.glm.linear \
+     --clump-field P \
+     --clump-p1 1e-5 \
+     --clump-r2 0.01 \
+     --clump-snp-field ID \
+     --out ./${gene}_${trait}.clump
+
+#---------4.saige.sh----------------------------------------------
+# See step1 and step2 for gene based test. Add common variants as covariates.
