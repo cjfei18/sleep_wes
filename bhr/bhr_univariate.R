@@ -6,7 +6,7 @@ rm(list = ls())
 baseline <- read.table("ms_baseline_oe5.txt")
 
 for(pheno_name in c("Chronotype", "Daytime", "Duration", "Getup", "Insomnia", "Nap", "OSA", "Snoring")){
-    for(func in c("_plof", "_missense", "_synonymous")){
+    for(func in c("_plof", "_missense")){
 
 BHR_input_path <- paste0(pheno_name,func, ".txt")
 BHR_input <- as.data.frame(fread(BHR_input_path))
